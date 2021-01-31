@@ -1,0 +1,28 @@
+.button {
+    padding: 8px 16px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background-color: pink;
+    cursor: button;
+}
+
+@keyframes button-spin {
+
+    from {
+        transform: rotateZ(20deg) rotateY(0deg) translateZ(120px);
+    }
+
+    to {
+        transform: rotateZ(20deg) rotateY(360deg) translateZ(120px);
+    }
+}
+
+.button.spin {
+    animation-name: button-spin;
+    animation-timing-function: linear;
+    animation-duration: 8s;
+    animation-play-state: running;
+    animation-iteration-count: infinite;
+    perspective: 600;
+}
